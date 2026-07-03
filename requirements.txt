@@ -1,0 +1,26 @@
+# Python packages used by this project.
+# Install everything with:   pip install -r requirements.txt
+#
+# (A recent Python 3.10+ is recommended.)
+
+pandas
+numpy
+scikit-learn
+matplotlib
+
+# Gradient-boosted tree models
+xgboost
+lightgbm
+
+# TabPFN (transformer-based tabular model). Pulls in PyTorch.
+# Pinned to 0.1.x: the notebook uses the v0.1 API (subsample_features etc.),
+# which changed in TabPFN 2.x. A GPU is optional but speeds it up; CPU works.
+tabpfn==0.1.10
+torch
+
+# Optional: model explainability (used in one XGBoost cell)
+shap
+
+# Only needed to re-download the raw dataset from Kaggle (Section 1 of the
+# main notebook). Requires Kaggle credentials.
+kagglehub
