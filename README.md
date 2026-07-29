@@ -31,13 +31,16 @@ team 1 wins.
   Logistic Regression · TabPFN · XGBoost · LightGBM
 ```
 
-Baseline models reach about 70% accuracy on a held-out test set of
-professional matches. Feature pruning with permutation importance gives the
-largest gains; the report's best configuration, pruned LightGBM, reached
-79.7% accuracy and 0.862 ROC AUC. TabPFN comes close without any
-hyperparameter tuning. The models broadly agree
-on which features matter most: recent rating, deaths per round, K/D ratio and
-map win-rates.
+Tuned models reach about 74% accuracy and 0.81 ROC AUC on a held-out test set
+of professional matches, at the upper end of the 60-70% range reported in
+earlier CS:GO and CS2 prediction work. TabPFN is competitive without any
+hyperparameter tuning. The models broadly agree on which features matter most:
+map win-rates, K/D ratio, deaths per round and recent rating.
+
+Note on the report's 79.7% figure: it comes from a pruned LightGBM whose
+features were selected using permutation importance computed on the test set.
+Recomputing that importance inside the training folds removes the gain, so
+79.7% is optimistic and should not be read as a held-out result.
 
 ## Repository structure
 
