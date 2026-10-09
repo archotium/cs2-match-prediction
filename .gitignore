@@ -19,3 +19,12 @@ env/
 .idea/
 .DS_Store
 Thumbs.db
+
+# LaTeX build artefacts (report/)
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+report/main.pdf
