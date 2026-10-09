@@ -1,26 +1,28 @@
 # Python packages used by this project.
 # Install everything with:   pip install -r requirements.txt
 #
-# (A recent Python 3.10+ is recommended.)
+# Versions are pinned to the set the notebook and robustness_check.py were
+# last run with end to end (Python 3.13, October 2026). Newer versions will
+# usually work, but tree-model scores can shift slightly between releases.
 
-pandas
-numpy
-scikit-learn
-matplotlib
+pandas==2.3.3
+numpy==2.4.1
+scikit-learn==1.7.2
+matplotlib==3.10.8
 
 # Gradient-boosted tree models
-xgboost
-lightgbm
+xgboost==3.1.3
+lightgbm==4.6.0
 
 # TabPFN (transformer-based tabular model). Pulls in PyTorch.
 # Pinned to 0.1.x: the notebook uses the v0.1 API (subsample_features etc.),
 # which changed in TabPFN 2.x. A GPU is optional but speeds it up; CPU works.
 tabpfn==0.1.10
-torch
+torch==2.9.1
 
 # Optional: model explainability (used in one XGBoost cell)
-shap
+shap==0.52.0
 
 # Only needed to re-download the raw dataset from Kaggle (Section 1 of the
 # main notebook). Requires Kaggle credentials.
-kagglehub
+kagglehub==0.4.0

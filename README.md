@@ -81,7 +81,7 @@ notebook shows one split in detail.
 
 ## Setup
 
-Python 3.10+ recommended.
+Python 3.11 or newer (the pinned NumPy needs it); the versions in `requirements.txt` were last tested on Python 3.13.
 
 ```bash
 pip install -r requirements.txt
