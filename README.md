@@ -1,8 +1,8 @@
 # CS2 Match Prediction
 
-Predicts the winner of a Counter-Strike 2 match from recent, map-specific
-player statistics, and compares four models on the task: logistic regression,
-TabPFN, XGBoost and LightGBM.
+Predicts which team wins each map of a professional Counter-Strike 2 match,
+from recent, map-specific player statistics, and compares four models on the
+task: logistic regression, TabPFN, XGBoost and LightGBM.
 
 The full write-up is in
 [`CS2_Match_Prediction_Report.pdf`](CS2_Match_Prediction_Report.pdf)
@@ -12,9 +12,9 @@ Match Prediction"*, April 2025, revised October 2026). Its LaTeX source is in
 
 ## Overview
 
-Given a match between two 5-player teams, with each player's recent form
-(kills, deaths, rating, map win-rates, etc.), the goal is to predict whether
-team 1 wins.
+Given one map of a match between two 5-player teams, with each player's recent
+form on that map (kills, deaths, rating, map win-rates, etc.), the goal is to
+predict whether team 1 wins it.
 
 ```
   Raw HLTV match data (Kaggle)        one row per map played, stats for all 10 players
